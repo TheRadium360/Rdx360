@@ -1,0 +1,36 @@
+.show_table{
+  margin-top: 3rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+table{
+  margin: 0 auto;
+  width: 100%;
+  clear: both;
+  border-collapse: collapse;
+  table-layout: fixed; 
+  word-wrap:break-word; 
+}
+
+.headings{
+  background-color: #1e202d;
+  color: #fff;
+}
+
+.buttons-collection,.buttons-copy,.buttons-csv,.buttons-print,.buttons-excel{
+  background-color: #1e202d;
+  color: #fff;
+}
+
+#binance_table_paginate{
+  margin-top: 1.5rem;
+  margin-right: .5rem;
+}
+
+li.paginate_button.active a{
+  background-color: #1e202d;
+  color: #fff;
+}
+
+
