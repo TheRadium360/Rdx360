@@ -3,12 +3,32 @@ const User=require( "../models/userModel" );
 const AppError=require( "../utils/appError" );
 
 
+
+//?????? HELPER FUNCTIONS
+const makeUserReturn=async ( Data ) => {
+
+  const userExist=await User.findOne( { wallet_address: Data.wallet_address } );
+  if ( userExist ) {
+    return [ userExist, "existing" ];
+  }
+  else {
+    const newUser=await User.create( Data );
+    return [ newUser, "new" ];
+  }
+
+
+
+}
+
+
 //****************** GET ALL USER ****************** 
 exports.getAllUsers=catchAysnc(async ( req, res, next ) => {
   
   const users=await User.find().select("-__v");
   if ( !users ) return next( new AppError( 404, "No User Found!" ) );
-  const usersData = users.map( usr => [ usr.id, usr.wallet_address, usr.coins,usr.rewards,usr.reffered_count,usr.reffered_id,usr.refrence_link  ] )
+
+  const usersData=users.map( usr => [ usr.id, usr.wallet_address, usr.coins, usr.rewards, usr.reffered_count, usr.reffered_id, usr.refrence_link ] )
+
   res.status( 200 ).json( {
     data:usersData
   } )
@@ -22,14 +42,15 @@ exports.createNewUser=catchAysnc(async ( req, res, next ) => {
     wallet_address:req.body.wallet_address
   };
 
-  
-  const newUser=await User.create( userData );
+  const [ user, state ]=await makeUserReturn( userData );
+  console.log( user );
+
+
 
   res.status( 200 ).json( {
     status: "success",
-    user:newUser    
+    user
   } )
-  
 
 })
 
@@ -45,10 +66,13 @@ exports.createNewUserWithReference = catchAysnc( async ( req, res, next ) => {
     wallet_address: req.body.wallet_address
   };
 
+
+  const [ user, state ]=await makeUserReturn( userData );
     // Finding refrenced user to give him reward
+
   const refrenceUser=await User.findOne( { reffered_id: ref_id } );
   
-  if ( refrenceUser.reffered_count < 10 ) {
+  if ( state==="fresh"&&refrenceUser.reffered_count<10 ) {
     
     refrenceUser.rewards += 10; 
     refrenceUser.reffered_count+=1;
@@ -58,11 +82,10 @@ exports.createNewUserWithReference = catchAysnc( async ( req, res, next ) => {
   }
 
   // Create user now
-  const newUser = await User.create( userData );
   
   res.status( 200 ).json( {
     status: "success",
-    user: newUser
+    user
 
   } )
 
