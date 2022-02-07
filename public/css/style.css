@@ -6,6 +6,7 @@ body {
 	line-height: 30px;
 	text-align: center;
 	background-color: #1e202d;
+  overflow-x: hidden;
 }
 
 
@@ -63,7 +64,7 @@ img {
 
 .dismiss:hover,
 .dismiss:focus {
-	background: #f4d500;
+	background: #eb5e29;
 	color: #fff;
 }
 
@@ -74,12 +75,12 @@ img {
 }
 
 .sidebar .logo a {
-	display: inline-block;
-	width: 172px;
-	height: 44px;
-	background: url(../img/logo.png) left top no-repeat;
-	border: 0;
-	text-indent: -999999px;
+	/* display: inline-block; */
+	/* width: 400px;
+	height: 70px; */
+	/* background: url("../img/radium png.png") left top no-repeat; */
+	/* border: 0; */
+	/* text-indent: -999999px; */
 }
 
 .sidebar ul.menu-elements {
@@ -100,7 +101,7 @@ img {
 .sidebar ul li.active>a:hover,
 .sidebar ul li.active>a:focus {
 	outline: 0;
-	background: #f4d500;
+	background: #eb5e29;
 	color: #fff;
 }
 
@@ -203,7 +204,7 @@ a[aria-expanded="true"] {
 }
 
 .sidebar.light a.btn-customized-3 {
-	background: #f4d500;
+	background: #eb5e29;
 	color: #888;
 }
 
@@ -301,7 +302,7 @@ a.btn-customized {
 	margin-left: 5px;
 	margin-right: 5px;
 	padding: .75rem 1.5rem;
-	background: #f4d500;
+	background: #eb5e29;
 	border: 0;
 	border-radius: 4px;
 	font-size: 16px;
@@ -318,7 +319,7 @@ a.btn-customized.active:focus,
 a.btn-customized.btn.btn-primary:not(:disabled):not(.disabled):active,
 a.btn-customized.btn.btn-primary:not(:disabled):not(.disabled):active:focus {
 	outline: 0;
-	background: #f4d300ce;
+	background:#ee7143;
 	background: f4d300ce;
 	border: 0;
 	color: #fff;
@@ -375,7 +376,7 @@ a.btn-customized-3.active:focus,
 a.btn-customized-3.btn.btn-primary:not(:disabled):not(.disabled):active,
 a.btn-customized-3.btn.btn-primary:not(:disabled):not(.disabled):active:focus {
 	outline: 0;
-	background: #f4d500;
+	background: #e76b3e;
 	border: 0;
 	color: #fff;
 	box-shadow: none;

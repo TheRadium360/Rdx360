@@ -1,6 +1,6 @@
 html,
 body {
-    background-image: url('http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg');
+    background: url('http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
@@ -26,7 +26,7 @@ body {
 
 .input-group-prepend span {
     width: 50px;
-    background-color: #FFC312;
+    background-color: #eb5e29;
     color: black;
     border: 0 !important;
 }
@@ -37,9 +37,9 @@ input:focus {
 }
 
 .login_btn {
-    margin-top: 3rem;
+    /* margin-top: 3rem; */
     color: black;
-    background-color: #FFC312;
+    background-color: #eb5e29;
     width: 340px;
 }
 

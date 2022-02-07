@@ -1,0 +1,49 @@
+html 
+  head 
+    //  TODO: ------------------- Required meta tags ----------------
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width,initial-scale=1,shrink-to-fit=no")
+    // TODO:----- Google Fonts(Optional) Roboto 
+    //  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"> 
+    // TODO:----- Bootstrap core CSS 
+    link(href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css", rel="stylesheet")
+    // TODO:----- Material Design Bootstrap 
+    link(href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css", rel="stylesheet")
+    // TODO:------------- Custom Personalize css  ------------
+    link(rel="stylesheet", href="/css/login.css")
+    title Login | RDX 360
+    // TODO:------ Adding icon of Max size of (100 X 100) in Tab bar 
+    link(rel="shortcut icon", href="/img/")
+    
+  body
+   .container
+     .d-flex.justify-content-center.h-100
+       .card
+         .card-header.pt-4.pl-4
+           h3.text-center Login
+         .card-body
+           form
+             .input-group.form-group
+               .input-group-prepend
+                 span.input-group-text.text-white
+                   i.fas.fa-user
+               input.form-control(type="text", placeholder="username",required)
+             .input-group.form-group.mt-4
+               .input-group-prepend
+                 span.input-group-text.text-white
+                   i.fas.fa-key
+               input.form-control(type="password", placeholder="password",required)
+             .form-group.mt-5
+               input.ml-2.btn.login_btn.text-white(type="submit", value="Login")
+   // TODO:----- JQuery 
+   script(type="text/javascript", src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js")
+   // TODO:----- Bootstrap tooltips 
+   script(type="text/javascript", src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js")
+   // TODO:----- Bootstrap core JavaScript 
+   script(type="text/javascript", src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js")
+   // TODO:----- MDB core JavaScript 
+   script(type="text/javascript", src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js")
+   // TODO:------------ Font awesome icons link  ------------
+   script(src="https://use.fontawesome.com/releases/v5.14.0/js/all.js")
+ 
+      

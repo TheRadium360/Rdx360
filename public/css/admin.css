@@ -4,6 +4,9 @@
   margin-right: 2rem;
 }
 
+body {
+  /* background: #000000; */
+}
 table{
   margin: 0 auto;
   width: 100%;

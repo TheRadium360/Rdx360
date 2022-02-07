@@ -15,7 +15,7 @@ const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controllers/errorController');
 const userRouter = require('./routes/userRouter');
 const adminRouter = require('./routes/adminRouter');
-// const viewRouter=require( './routes/viewRouter' );
+const viewRouter=require( './routes/viewRouter' );
 
 const app = express();
 
@@ -81,7 +81,7 @@ app.use(xss()) //clean  malicious html code from user input
 //! MiddleWare for specfic routes
 
 
-// app.use( '/', viewRouter );
+app.use( '/', viewRouter );
 app.use('/api/v1/users', userRouter); //if route === "/api/v1/users"
 app.use('/api/v1/admin', adminRouter); //admin route
 

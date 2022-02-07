@@ -1,0 +1,47 @@
+html
+  head
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width,initial-scale=1,shrink-to-fit=no")
+    title Crypto
+    //  Table Css 
+    link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css")
+    link(rel="stylesheet", href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css")
+    link(rel="stylesheet", href="https://cdn.datatables.net/buttons/1.2.2/css/buttons.bootstrap.min.css")
+    link(rel="stylesheet", href="css/admin.css")
+  
+  body
+    .text-center(style="margin-top: 3rem ; margin-bottom: 5rem;")
+      img(src="img/radium black.png", style="width: 250px;", alt)
+    .show_table
+      table#binance_table.table.table-striped.table-bordered.display.table-dark.inner_table(cellspacing="0", width="100%")
+        thead
+          tr
+            th.headings.px-3 id
+            th.headings.px-3 wallet_address
+            th.headings.px-3 coins
+            th.headings.px-3 rewards
+            th.headings.px-3 reffered_count
+            th.headings.px-3 reffered_id
+            th.headings.px-3 refrence_link
+        tfoot
+          tr
+            th.headings.px-3 id
+            th.headings.px-3 wallet_address
+            th.headings.px-3 coins
+            th.headings.px-3 rewards
+            th.headings.px-3 reffered_count
+            th.headings.px-3 reffered_id
+            th.headings.px-3 refrence_link
+    //  Table JS 
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js")
+    script(src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js")
+    script(src="https://cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js")
+    script(src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.colVis.min.js")
+    script(src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.html5.min.js")
+    script(src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.print.min.js")
+    script(src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js")
+    script(src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.bootstrap.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js")
+    script(src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js")
+    script(src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js")
+    script(src="js/admin.js")

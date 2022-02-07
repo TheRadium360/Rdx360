@@ -4,11 +4,19 @@
 }
 
 .presale_btn {
-  background-color: #f4d500;
+  background-color: #eb5e29;
+  }
+
+  .presale_btn:hover {
+    background-color: #ee7143;
 }
 
 .airdrop_btn {
-  background-color: #5b7fec;
+  background-color: #5569b2;
+  }
+
+  .airdrop_btn:hover {
+    background-color: #6a74b8;
 }
 
 .airdrop_ending {
@@ -24,13 +32,27 @@
 .whitepaper_btn,
 .auditreport_btn {
   border-radius: 2rem;
-  background-color: #5b7fec;
+  background-color: #5569b2;
   color: white;
+}
+.whitepaper_btn:hover {
+  color: white !important;
+  background-color: #6a74b8;
 }
 .copyaddress_btn {
   border-radius: 2rem;
-  background-color: #5b7fec;
+  background-color: #5569b2;
   color: white;
+}
+
+.withdraw_btn {
+  background-color: #5569b2;
+}
+
+.copyaddress_btn:hover,
+.withdraw_btn:hover {
+  color: white;
+  background-color: #6a74b8;
 }
 
 .presale_desc {
@@ -196,4 +218,74 @@ border-bottom: 1px splid rgb(170, 167, 167) !important;
 
 .partner_img_12 {
   width: 13rem;
+}
+main {
+  min-width: 300px;
+  max-width: 500px;
+  margin: auto;
+  color: white !important;
+}
+
+.para {
+  font-size: 1em;
+  line-height: 1.75em;
+  border-top: 3px solid;
+  border-image: linear-gradient(to right, #743ad5 0%, #d53a9d 100%);
+  border-image-slice: 1;
+  border-width: 3px;
+  margin: 0;
+  padding: 40px;
+  counter-increment: section;
+  position: relative;
+
+}
+
+/* numbers */
+.para:before {
+  content: counter(section);
+  position: absolute;
+  border-radius: 50%;
+  padding: 10px;
+  height: 2.65rem;
+  width: 2.65rem;
+  background-color: black;
+  text-align: center;
+  line-height: 1.25em;
+  color: white;
+  font-size: 1rem;
+}
+
+/* odd number borders */
+.para:nth-child(odd) {
+  border-right: 3px solid;
+  padding-left: 0;
+}
+
+.para:nth-child(odd):before {
+  left: 100%;
+  margin-left: -20px;
+}
+
+/* even number borders */
+.para:nth-child(even) {
+  border-left: 3px solid;
+  padding-right: 0;
+
+}
+
+.para:nth-child(even):before {
+  right: 100%;
+  margin-right: -20px;
+}
+
+/* handle first and last */
+.para:first-child {
+  border-top: 0;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.para:last-child {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
 }

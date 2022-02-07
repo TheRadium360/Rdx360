@@ -1,5 +1,5 @@
 {
-    "name": "Crypto Binance",
+    "name": "RDX",
     "version": "1.0.0",
     "description": "",
     "main": "./public/js/bundle.js",
@@ -11,7 +11,7 @@
         "build:js": "parcel build ./public/js/index.js --dist-dir ./public/js",
         "dev:js": "parcel ./public/js/index.js"
     },
-    "author": "Muzamil Ahmad and Fasih Ur Rehman (Radium-360)",
+    "author": "Muzamil Ahmad, Fasih Ur Rehman, Muhammad Uzair Baig (Radium-360)",
     "license": "ISC",
     "keywords": [],
     "dependencies": {
