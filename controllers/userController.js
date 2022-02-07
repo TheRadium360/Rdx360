@@ -16,8 +16,6 @@ const makeUserReturn=async ( Data ) => {
     return [ newUser, "new" ];
   }
 
-
-
 }
 
 
@@ -41,12 +39,10 @@ exports.createNewUser=catchAysnc(async ( req, res, next ) => {
   const userData = {
     wallet_address:req.body.wallet_address
   };
-
+  console.log( userData );
   const [ user, state ]=await makeUserReturn( userData );
-  console.log( user );
-
-
-
+  // console.log( "userController ", user );
+  // console.log( state );
   res.status( 200 ).json( {
     status: "success",
     user
@@ -69,11 +65,13 @@ exports.createNewUserWithReference = catchAysnc( async ( req, res, next ) => {
 
   const [ user, state ]=await makeUserReturn( userData );
     // Finding refrenced user to give him reward
-
+  // console.log( "-------------------increasing reward-----------------" );
+  // console.log( state==="new" && refrenceUser.reffered_count<10 )
   const refrenceUser=await User.findOne( { reffered_id: ref_id } );
   
-  if ( state==="fresh"&&refrenceUser.reffered_count<10 ) {
-    
+  if ( state==="new"&&refrenceUser.reffered_count<10 ) {
+    console.log( "-------------------entering-----------------" );
+
     refrenceUser.rewards += 10; 
     refrenceUser.reffered_count+=1;
     refrenceUser.coins+=10; 

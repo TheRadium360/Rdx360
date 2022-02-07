@@ -1,7 +1,4 @@
-
 const copyAddressBtn=document.querySelector( '.copyaddress_btn' );
-
-
 
 function scroll_to(clicked_link, nav_height) {
 	var element_class = clicked_link.attr('href').replace('#', '.');
@@ -183,8 +180,11 @@ copyAddressBtn.addEventListener( 'click', e => {
 	const addressCopiedText=document.querySelector( '.address_copied_text' );
 	const r=document.createRange();
 	r.selectNode( document.getElementById( 'copy' ) );
+
 	window.getSelection().removeAllRanges();
 	window.getSelection().addRange( r );
+
+
 	document.execCommand( 'copy' );
 	window.getSelection().removeAllRanges();
 	addressCopiedText.style.opacity=1;

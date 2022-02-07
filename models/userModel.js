@@ -59,7 +59,8 @@ userSchema.virtual( 'refrence_link' ).get( function () {
   let protocol="http";      // protocol will be modified later(before deployement)
 
   // let url=`${protocol}://${domain}/${this.reffered_id}`;
-  let url=`${protocol}://${domain}/api/v1/users/${this.reffered_id}`;
+  let url=`${protocol}://${domain}/${this.reffered_id}`;
+
   return url;
 } )
 

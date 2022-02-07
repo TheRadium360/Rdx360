@@ -2,8 +2,20 @@ const User=require( "../models/userModel" );
 const Admin=require( "../models/adminModel" );
 const AppError=require( "../utils/appError" );
 const catchAsync=require( "../utils/catchAsync" );
+const querystring=require( 'querystring' );
+
 
 exports.getOverview=catchAsync( async ( req, res, next ) => {
+  // console.log( req.params );
+  // console.log( querystring.parse( req.originalUrl ) );
+  // console.log( "=>>> ", req.originalUrl )
+
+  // const urlParameter=req.originalUrl.split( '/' )[ 1 ];
+  // let reference_id;
+  // if ( urlParameter.split( '-' )[ 0 ].length===24 ) {
+  //   reference_id=urlParameter.split( '-' )[ 0 ];
+  // }
+
   res.status( 200 ).render( "overview", {
   } );
 } );
@@ -14,18 +26,7 @@ exports.login=catchAsync( async ( req, res, next ) => {
 } );
 
 exports.adminDashboard=catchAsync( async ( req, res, next ) => {
-  const users=await User.find();
-  if ( !req.headers.cookie ) {
-    res.status( 401 ).render( "error", {
-      message: "You are not logged in ! Please Login!",
-      status: 401,
-      link: "/admin/login",
-      pageName: "Login",
-      users,
-    } );
-  } else {
-    res.status( 200 ).render( "admin", {
-      users
-    } );
-  }
+
+
+  res.status( 200 ).render( "admin", {} )
 } );
