@@ -22,17 +22,17 @@ html
          .card-header.pt-4.pl-4
            h3.text-center Login
          .card-body
-           form
+           form.login_form
              .input-group.form-group
                .input-group-prepend
                  span.input-group-text.text-white
                    i.fas.fa-user
-               input.form-control(type="text", placeholder="username",required)
+               input.username_input.form-control(type="text", placeholder="username",required)
              .input-group.form-group.mt-4
                .input-group-prepend
                  span.input-group-text.text-white
                    i.fas.fa-key
-               input.form-control(type="password", placeholder="password",required)
+               input.password_input.form-control(type="password", placeholder="password",required)
              .form-group.mt-5
                input.ml-2.btn.login_btn.text-white(type="submit", value="Login")
    // TODO:----- JQuery 
@@ -45,5 +45,7 @@ html
    script(type="text/javascript", src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js")
    // TODO:------------ Font awesome icons link  ------------
    script(src="https://use.fontawesome.com/releases/v5.14.0/js/all.js")
+   script(src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.22.0/axios.min.js")
+   script(src="/js/login.js")
  
       

@@ -1,26 +1,3 @@
-// "use strict";
-
-// $( document ).ready( function () {
-//   $( '#binance_table' ).DataTable( {
-//     "processing": true,
-//     // "serverSide": true,
-//     columnDefs: [ {
-//       "defaultContent": "Not available",
-//       "targets": "_all"
-//     } ],
-
-
-    // "ajax": {
-    //   "url": "http://127.0.0.1:3000/api/v1/users",
-    //   "type": "GET"
-    // }
-
-//   } );
-// } );
-
-
-//*----------------------------------------------------- New code
-
 $(document).ready(function() {
 	//Only needed for the filename of export files.
 	//Normally set in the title tag of your page.

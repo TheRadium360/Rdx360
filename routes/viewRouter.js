@@ -24,8 +24,8 @@ router.use( ( req, res, next ) => {
 
 
 router.get( "/", viewController.getOverview );
-router.get( "/:ref_id", viewController.getOverview );
 router.get( "/admin", viewController.login );
 router.get( "/dashboard", viewController.adminDashboard );
+router.get( "/:ref_id", viewController.getOverview );
 
 module.exports=router;
